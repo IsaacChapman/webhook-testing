@@ -1,0 +1,9 @@
+---
+environment:
+  TEST_ENV_VAR_1=one
+  TEST_ENV_VAR_2=two
+pipeline:
+  - pipeline_step
+profiles:
+  pipeline_step:
+    script: env | grep ^TEST_ENV_VAR | sort
